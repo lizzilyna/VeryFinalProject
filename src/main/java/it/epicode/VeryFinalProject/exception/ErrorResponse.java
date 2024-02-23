@@ -1,2 +1,16 @@
-package it.epicode.VeryFinalProject.exception;public class ErrorResponse {
+package it.epicode.VeryFinalProject.exception;
+
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+@Data
+public class ErrorResponse {
+    private String message;
+    private LocalDateTime dataError;
+
+    public ErrorResponse(String message) {
+        this.message = message;
+        dataError = LocalDateTime.now();
+    }
 }

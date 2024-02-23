@@ -3,32 +3,45 @@ package it.epicode.VeryFinalProject.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 @Data
 @Entity
-public class BlogPost {
+public class Evento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String contenuto;
     private String titolo;
-    private String cover;
-    private String categoria;
-    private int tempoLettura;
+    private String descrizione;
+    private Date date;
+    private String luogo;
 
-    @ManyToOne
-    @JoinColumn(name = "autore_id")
-    private Autore autore;
+    @Column(name="posti_disponibili")
+    private int postiDisponibili;
 
-    public BlogPost(String contenuto, String titolo, String categoria, int tempoLettura, Autore autore) {
-        this.contenuto = contenuto;
+    @ManyToMany
+    @JoinTable(name = "lista_utenti")
+    private List<Utente> utenti;
+
+    public Evento(String titolo, String descrizione, Date date, String luogo, int postiDisponibili ) {
         this.titolo = titolo;
-        this.categoria = categoria;
-        this.tempoLettura = tempoLettura;
-        this.autore = autore;
+        this.descrizione = descrizione;
+        this.date = date;
+        this.luogo = luogo;
+        this.postiDisponibili = postiDisponibili;
+        this.utenti = new ArrayList<>();
     }
 
-    public BlogPost(){
+    public Evento() {
+    }
 
+    public void addUtente(Utente utente){
+        utenti.add(utente);
     }
 }
+
+
+

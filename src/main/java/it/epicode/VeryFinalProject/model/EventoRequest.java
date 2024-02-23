@@ -1,21 +1,24 @@
 package it.epicode.VeryFinalProject.model;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
-public class BlogPostRequest {
-    @NotNull(message = "contenuto obbligatorio")
-    @NotEmpty(message = "contenuto obbligatorio")
-    private String contenuto;
-
-    @NotNull(message = "titolo obbligatorio")
-    @NotEmpty(message = "titolo obbligatorio")
+public class EventoRequest {
+    @NotBlank(message = "campo obbligatorio")
     private String titolo;
-    private String categoria;
-    private int tempoLettura;
+    @NotBlank(message = "campo obbligatorio")
+    private String descrizione;
+    @NotBlank(message = "campo obbligatorio")
+    private String luogo;
+    @NotBlank(message = "campo obbligatorio")
+    private Date data;
+    @NotBlank(message = "campo obbligatorio")
+    private int postiDisponibili;
 
-    @NotNull(message = "Autore obbligatorio")
-    private Integer idAutore;
+    private int user_id;
 }

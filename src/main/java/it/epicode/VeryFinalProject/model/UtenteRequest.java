@@ -1,4 +1,4 @@
-package it.epicode.w7d1t.model;
+package it.epicode.VeryFinalProject.model;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -7,12 +7,12 @@ import lombok.Data;
 @Data
 public class UtenteRequest {
 
-    @NotBlank(message = "nome obbligatorio")
+    @NotBlank(message = "campo obbligatorio")
     private String nome;
-    @NotBlank(message = "cognome obbligatorio")
+    @NotBlank(message = "campo obbligatorio")
     private String cognome;
-    @NotBlank(message = "username obbligatorio")
+    @NotBlank(message = "campo obbligatorio")
     private String username;
-    @NotBlank(message = "password obbligatoria")
+    @NotBlank(message = "campo obbligatoria")
     private String password;
 }

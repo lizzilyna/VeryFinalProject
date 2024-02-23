@@ -1,2 +1,5 @@
-package it.epicode.VeryFinalProject.model;public class Ruolo {
+package it.epicode.VeryFinalProject.model;
+
+public enum Ruolo {
+    ORGANIZZATORE, USER
 }

@@ -1,2 +1,7 @@
-package it.epicode.VeryFinalProject.exception;public class UnhautorizedException {
+package it.epicode.VeryFinalProject.exception;
+
+public class UnAuthorizedException extends RuntimeException{
+    public UnAuthorizedException(String message){
+        super(message);
+    }
 }

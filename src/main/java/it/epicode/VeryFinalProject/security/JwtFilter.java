@@ -1,8 +1,8 @@
-package it.epicode.w7d1t.security;
+package it.epicode.VeryFinalProject.security;
 
-import it.epicode.w7d1t.exception.UnAuthorizedException;
-import it.epicode.w7d1t.model.Utente;
-import it.epicode.w7d1t.service.UtenteService;
+import it.epicode.VeryFinalProject.exception.UnAuthorizedException;
+import it.epicode.VeryFinalProject.model.Utente;
+import it.epicode.VeryFinalProject.service.UtenteService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
