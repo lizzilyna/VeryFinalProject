@@ -10,9 +10,9 @@ public class UtenteRequest {
     @NotBlank(message = "campo obbligatorio")
     private String nome;
     @NotBlank(message = "campo obbligatorio")
-    private String cognome;
+    private  String cognome;
     @NotBlank(message = "campo obbligatorio")
     private String username;
-    @NotBlank(message = "campo obbligatoria")
+    @NotBlank(message = "campo obbligatorio")
     private String password;
 }
